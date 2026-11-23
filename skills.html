@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills & Learning | Saina Bagheri</title>
+  <meta name="description" content="Technical interests, practical skills, tools, and ongoing learning in artificial intelligence, machine learning, and programming by Saina Bagheri, Future AI Researcher.">
+  <meta name="author" content="Saina Bagheri">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Skills & Learning | Saina Bagheri">
+  <meta property="og:description" content="Technical interests, practical skills, tools, and ongoing learning in artificial intelligence and programming.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="site-body page-skills">
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Skip to main content</a>
+
+  <svg class="svg-sprite" width="0" height="0" aria-hidden="true">
+    <defs>
+      <symbol id="saina-mark" viewBox="0 0 64 64">
+        <ellipse class="mark-orbit" cx="32" cy="32" rx="29" ry="11" transform="rotate(-24 32 32)" fill="none" stroke="currentColor" stroke-width="1.6"></ellipse>
+        <path class="mark-s" d="M46 17C46 10 18 10 18 22C18 33 46 31 46 42C46 54 18 54 18 47" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <circle class="mark-dot" cx="58.5" cy="20.2" r="2.6" fill="currentColor" stroke="none"></circle>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="ambient-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#saina-mark"></use></svg>
+        <span class="brand-text">
+          <span class="brand-name" data-i18n="brand.name">Saina Bagheri</span>
+          <span class="brand-role" data-i18n="brand.role">Future AI Researcher</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel">
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-i18n-aria-label="nav.primary">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="education.html" data-i18n="nav.education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link is-active" href="skills.html" aria-current="page" data-i18n="nav.skills">Skills & Learning</a></li>
+            <li class="nav-item"><a class="nav-link" href="profiles.html" data-i18n="nav.profiles">Online Profiles</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <div class="control-group language-switch" id="language-switch" role="group" aria-label="Language" data-i18n-aria-label="controls.language">
+            <button class="control-button language-button is-active" id="lang-en" type="button" data-lang-option="en" aria-pressed="true" aria-label="English (EN)" data-i18n-aria-label="lang.enLabel">EN</button>
+            <button class="control-button language-button" id="lang-fa" type="button" data-lang-option="fa" aria-pressed="false" aria-label="Persian (FA)" data-i18n-aria-label="lang.faLabel">FA</button>
+          </div>
+
+          <div class="control-group theme-switch" id="theme-switch" role="group" aria-label="Theme" data-i18n-aria-label="controls.theme">
+            <button class="control-button theme-button is-active" id="theme-light" type="button" data-theme-option="light" aria-pressed="true" aria-label="Light theme" data-i18n-aria-label="theme.lightLabel">
+              <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+              <span class="control-label" data-i18n="theme.light">Light</span>
+            </button>
+            <button class="control-button theme-button" id="theme-dark" type="button" data-theme-option="dark" aria-pressed="false" aria-label="Dark theme" data-i18n-aria-label="theme.darkLabel">
+              <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <span class="control-label" data-i18n="theme.dark">Dark</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main-content" tabindex="-1">
+
+    <section class="page-hero" id="skills-hero" aria-labelledby="skills-title">
+      <svg class="hero-orbit-symbol" viewBox="0 0 64 64" aria-hidden="true"><use href="#saina-mark"></use></svg>
+      <div class="page-hero-inner">
+        <p class="section-eyebrow">
+          <span class="section-rule" aria-hidden="true"></span>
+          <span class="section-label" data-i18n="skills.hero.eyebrow" data-i18n-fa="نمای کلی مهارت‌ها">Skills Overview</span>
+        </p>
+        <h1 class="page-title" id="skills-title" data-i18n="skills.hero.title" data-i18n-fa="مهارت‌ها و یادگیری">Skills & Learning</h1>
+        <p class="page-lead page-quote" data-i18n="skills.hero.quote" data-i18n-fa="«هر مهارتی با کنجکاوی آغاز می‌شود.»">“Every skill begins with curiosity.”</p>
+        <p class="page-lead" data-i18n="skills.hero.intro" data-i18n-fa="یادگیری در هوش مصنوعی و برنامه‌نویسی فرایندی پیوسته است. من مفاهیم تازه را یاد می‌گیرم، آن‌ها را در کد آزمایش می‌کنم و با ساختن پروژه‌ها می‌بینم درکم کجا محکم است و کجا هنوز به تمرین بیشتر نیاز دارد.">Learning in artificial intelligence and programming is a continuous process. I study new concepts, test them in code, and build projects that show where my understanding is strong and where it still needs practice.</p>
+      </div>
+    </section>
+
+    <section class="section" id="technical-skills" aria-labelledby="technical-skills-title">
+      <div class="section-inner intro-layout">
+        <header class="section-header">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">01</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="skills.tech.eyebrow" data-i18n-fa="نقشه مهارت‌ها">Skills Map</span>
+          </p>
+          <h2 class="section-title" id="technical-skills-title" data-i18n="skills.tech.title" data-i18n-fa="مهارت‌های فنی">Technical Skills</h2>
+          <p class="section-lead" data-i18n="skills.tech.lead" data-i18n-fa="زبان‌های برنامه‌نویسی، حوزه‌های هوش مصنوعی، روش‌های علم داده و ابزارهایی که در حال یادگیری آن‌ها هستم یا از طریق پروژه‌ها بررسی‌شان کرده‌ام. این‌ها حوزه‌های مطالعه و تمرین هستند، نه سطوح مهارت سنجیده‌شده.">Programming languages, AI fields, data science methods, and tools that I am learning or have explored through projects. These are areas of study and practice, not measured proficiency levels.</p>
+        </header>
+
+        <div class="skill-groups">
+          <article class="skill-group" aria-labelledby="skill-group-programming-title">
+            <h3 class="skill-group-title" id="skill-group-programming-title" data-i18n="skills.group.programming.title" data-i18n-fa="برنامه‌نویسی">Programming</h3>
+            <p class="card-text" data-i18n="skills.group.programming.text" data-i18n-fa="زبان‌هایی برای نوشتن اسکریپت، گردش‌کار داده و صفحات وب تعاملی.">Languages for writing scripts, data workflows, and interactive web pages.</p>
+            <ul class="skill-list">
+              <li class="skill-chip">Python</li>
+              <li class="skill-chip">HTML</li>
+              <li class="skill-chip">CSS</li>
+              <li class="skill-chip">JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="skill-group" aria-labelledby="skill-group-ai-title">
+            <h3 class="skill-group-title" id="skill-group-ai-title" data-i18n="skills.group.ai.title" data-i18n-fa="هوش مصنوعی">Artificial Intelligence</h3>
+            <p class="card-text" data-i18n="skills.group.ai.text" data-i18n-fa="حوزه‌های اصلی مطالعه، از سامانه‌های یادگیرنده تا مدل‌های مولد.">Core fields of study, from learning systems to generative models.</p>
+            <ul class="skill-list">
+              <li class="skill-chip" data-i18n="skills.chip.ml" data-i18n-fa="یادگیری ماشین">Machine Learning</li>
+              <li class="skill-chip" data-i18n="skills.chip.dl" data-i18n-fa="یادگیری عمیق">Deep Learning</li>
+              <li class="skill-chip" data-i18n="skills.chip.nn" data-i18n-fa="شبکه‌های عصبی">Neural Networks</li>
+              <li class="skill-chip" data-i18n="skills.chip.cv" data-i18n-fa="بینایی ماشین">Computer Vision</li>
+              <li class="skill-chip" data-i18n="skills.chip.nlp" data-i18n-fa="پردازش زبان طبیعی">Natural Language Processing</li>
+              <li class="skill-chip" data-i18n="skills.chip.genai" data-i18n-fa="هوش مصنوعی مولد">Generative AI</li>
+            </ul>
+          </article>
+
+          <article class="skill-group" aria-labelledby="skill-group-data-title">
+            <h3 class="skill-group-title" id="skill-group-data-title" data-i18n="skills.group.data.title" data-i18n-fa="علم داده">Data Science</h3>
+            <p class="card-text" data-i18n="skills.group.data.text" data-i18n-fa="روش‌هایی که داده خام را به بینشی قابل اعتماد و قابل فهم تبدیل می‌کنند.">Methods that turn raw data into reliable, understandable insight.</p>
+            <ul class="skill-list">
+              <li class="skill-chip" data-i18n="skills.chip.analysis" data-i18n-fa="تحلیل داده">Data Analysis</li>
+              <li class="skill-chip" data-i18n="skills.chip.preprocessing" data-i18n-fa="پیش‌پردازش داده">Data Preprocessing</li>
+              <li class="skill-chip" data-i18n="skills.chip.visualization" data-i18n-fa="تجسم داده">Data Visualization</li>
+              <li class="skill-chip" data-i18n="skills.chip.evaluation" data-i18n-fa="ارزیابی مدل">Model Evaluation</li>
+            </ul>
+          </article>
+
+          <article class="skill-group" aria-labelledby="skill-group-tools-title">
+            <h3 class="skill-group-title" id="skill-group-tools-title" data-i18n="skills.group.tools.title" data-i18n-fa="توسعه و ابزارها">Development & Tools</h3>
+            <p class="card-text" data-i18n="skills.group.tools.text" data-i18n-fa="محیط‌ها، کتابخانه‌ها و پلتفرم‌هایی که برای نوشتن، آزمودن و اشتراک‌گذاری کد به کار می‌روند.">Environments, libraries, and platforms used to write, test, and share code.</p>
+            <ul class="skill-list">
+              <li class="skill-chip">TensorFlow / Keras</li>
+              <li class="skill-chip">Scikit-learn</li>
+              <li class="skill-chip">NumPy</li>
+              <li class="skill-chip">Pandas</li>
+              <li class="skill-chip">Matplotlib</li>
+              <li class="skill-chip">Seaborn</li>
+              <li class="skill-chip">Jupyter Notebook</li>
+              <li class="skill-chip">VS Code</li>
+              <li class="skill-chip">Google Colab</li>
+              <li class="skill-chip">Kaggle</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="learning-through-projects" aria-labelledby="projects-learning-title">
+      <div class="section-inner">
+        <header class="section-header section-header-split">
+          <div class="section-heading-block">
+            <p class="section-eyebrow">
+              <span class="section-index" aria-hidden="true">02</span>
+              <span class="section-rule" aria-hidden="true"></span>
+              <span class="section-label" data-i18n="skills.projects.eyebrow" data-i18n-fa="تجربه عملی">Practical Experience</span>
+            </p>
+            <h2 class="section-title" id="projects-learning-title" data-i18n="skills.projects.title" data-i18n-fa="یادگیری از طریق پروژه‌ها">Learning Through Projects</h2>
+          </div>
+          <p class="section-lead" data-i18n="skills.projects.lead" data-i18n-fa="پروژه‌ها جایی هستند که مفاهیم به درک تبدیل می‌شوند. کارهای زیر، آنچه کامل شده را از آنچه هنوز در حال توسعه است جدا می‌کنند.">Projects are where concepts become understanding. The work below separates completed work from work that is still in development.</p>
+        </header>
+
+        <div class="project-showcase">
+          <article class="project-feature" aria-labelledby="smartgym-title">
+            <div class="project-feature-media">
+              <div class="project-visual" aria-hidden="true">
+                <svg class="project-mark" viewBox="0 0 64 64"><use href="#saina-mark"></use></svg>
+              </div>
+            </div>
+            <div class="project-feature-body">
+              <p class="project-meta">
+                <span class="project-number">01</span>
+                <span class="project-status" data-i18n="skills.status.completed" data-i18n-fa="تکمیل‌شده">Completed</span>
+              </p>
+              <h3 class="project-title" id="smartgym-title">SmartGym AI</h3>
+              <p class="project-text" data-i18n="skills.smartgym.text" data-i18n-fa="پروژه‌ای برای پیش‌بینی ریزش مشتری بر پایه مجموعه‌داده‌ای با ۴٬۰۰۰ رکورد. این کار شامل پیش‌پردازش و تجسم داده، ساخت یک شبکه عصبی کانولوشنی سفارشی با TensorFlow/Keras، مقایسه با مدل Random Forest و ارزیابی عملکرد طبقه‌بندی بود.">A churn prediction project built on a dataset of 4,000 records. The work covered data preprocessing and visualization, a custom convolutional neural network built with TensorFlow/Keras, a comparison with a Random Forest model, and the evaluation of classification performance.</p>
+              <dl class="fact-list">
+                <div class="fact-item">
+                  <dt class="fact-label" data-i18n="skills.smartgym.factDataset" data-i18n-fa="مجموعه داده">Dataset</dt>
+                  <dd class="fact-value" data-i18n="skills.smartgym.factDatasetValue" data-i18n-fa="۴٬۰۰۰ رکورد">4,000 records</dd>
+                </div>
+                <div class="fact-item">
+                  <dt class="fact-label" data-i18n="skills.smartgym.factModels" data-i18n-fa="مدل‌های مقایسه‌شده">Models Compared</dt>
+                  <dd class="fact-value" data-i18n="skills.smartgym.factModelsValue" data-i18n-fa="CNN سفارشی و Random Forest">Custom CNN and Random Forest</dd>
+                </div>
+                <div class="fact-item">
+                  <dt class="fact-label" data-i18n="skills.smartgym.factApp" data-i18n-fa="کاربرد">Application</dt>
+                  <dd class="fact-value" data-i18n="skills.smartgym.factAppValue" data-i18n-fa="موتور پیش‌بینی ریزش مشتری">Churn prediction engine</dd>
+                </div>
+              </dl>
+              <ul class="tag-list">
+                <li class="tag" data-i18n="skills.smartgym.tag1" data-i18n-fa="پیش‌پردازش داده">Data preprocessing</li>
+                <li class="tag" data-i18n="skills.smartgym.tag2" data-i18n-fa="تجسم داده">Data visualization</li>
+                <li class="tag" data-i18n="skills.smartgym.tag3" data-i18n-fa="CNN سفارشی">Custom CNN</li>
+                <li class="tag" data-i18n="skills.smartgym.tag4" data-i18n-fa="مقایسه با Random Forest">Random Forest comparison</li>
+                <li class="tag" data-i18n="skills.smartgym.tag5" data-i18n-fa="ارزیابی طبقه‌بندی">Classification evaluation</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-feature is-reversed" aria-labelledby="ethics-game-title">
+            <div class="project-feature-media">
+              <div class="project-visual" aria-hidden="true">
+                <svg class="project-mark" viewBox="0 0 64 64"><use href="#saina-mark"></use></svg>
+              </div>
+            </div>
+            <div class="project-feature-body">
+              <p class="project-meta">
+                <span class="project-number">02</span>
+                <span class="project-status" data-i18n="skills.status.inProgress" data-i18n-fa="در حال توسعه">In Development</span>
+              </p>
+              <h3 class="project-title" id="ethics-game-title" data-i18n="skills.ethics.title" data-i18n-fa="بازی آموزشی مشترک درباره اخلاق هوش مصنوعی">Collaborative AI Ethics Educational Game</h3>
+              <p class="project-text" data-i18n="skills.ethics.text" data-i18n-fa="یک پروژه مشترک و در جریان: بازی آموزشی که پرسش‌های اخلاقی برآمده از هوش مصنوعی را بررسی می‌کند. این پروژه هنوز در حال توسعه است و با پیشرفت آن، این صفحه به‌روزرسانی خواهد شد.">An ongoing collaborative project: an educational game that explores the ethical questions raised by artificial intelligence. The project is still in development, and this page will be updated as it progresses.</p>
+              <dl class="fact-list">
+                <div class="fact-item">
+                  <dt class="fact-label" data-i18n="skills.ethics.factFormat" data-i18n-fa="قالب">Format</dt>
+                  <dd class="fact-value" data-i18n="skills.ethics.factFormatValue" data-i18n-fa="بازی آموزشی">Educational game</dd>
+                </div>
+                <div class="fact-item">
+                  <dt class="fact-label" data-i18n="skills.ethics.factApproach" data-i18n-fa="رویکرد">Approach</dt>
+                  <dd class="fact-value" data-i18n="skills.ethics.factApproachValue" data-i18n-fa="مشارکتی">Collaborative</dd>
+                </div>
+                <div class="fact-item">
+                  <dt class="fact-label" data-i18n="skills.ethics.factFocus" data-i18n-fa="تمرکز">Focus</dt>
+                  <dd class="fact-value" data-i18n="skills.ethics.factFocusValue" data-i18n-fa="اخلاق هوش مصنوعی">Ethics of artificial intelligence</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-footer">
+          <a class="text-link" href="projects.html">
+            <span class="text-link-label" data-i18n="skills.projects.viewAll" data-i18n-fa="مشاهده همه پروژه‌ها">View All Projects</span>
+            <svg class="text-link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="learning-approach" aria-labelledby="approach-title">
+      <div class="section-inner intro-layout">
+        <header class="section-header">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">03</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="skills.approach.eyebrow" data-i18n-fa="رویکرد من">My Approach</span>
+          </p>
+          <h2 class="section-title" id="approach-title" data-i18n="skills.approach.title" data-i18n-fa="رویکرد من به یادگیری">My Learning Approach</h2>
+          <p class="section-lead" data-i18n="skills.approach.lead" data-i18n-fa="چرخه‌ای ساده که بارها به آن برمی‌گردم، از نخستین مفهوم تا نتیجه نهایی.">A simple cycle that I return to again and again, from the first concept to the final result.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="skills.approach.step1Label" data-i18n-fa="مرحله ۰۱">Step 01</p>
+            <h3 class="timeline-title" data-i18n="skills.approach.step1Title" data-i18n-fa="یادگیری مبانی">Learn the fundamentals</h3>
+            <p class="timeline-body" data-i18n="skills.approach.step1Text" data-i18n-fa="ساختن پایه‌ای روشن در برنامه‌نویسی و مفاهیم اصلی یادگیری ماشین.">Building a clear foundation in programming and core machine learning ideas.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="skills.approach.step2Label" data-i18n-fa="مرحله ۰۲">Step 02</p>
+            <h3 class="timeline-title" data-i18n="skills.approach.step2Title" data-i18n-fa="کاوش مفاهیم تازه">Explore new concepts</h3>
+            <p class="timeline-body" data-i18n="skills.approach.step2Text" data-i18n-fa="مطالعه روش‌های تازه و پرسیدن این‌که چگونه کار می‌کنند، پیش از به‌کارگیری آن‌ها.">Reading about new methods and asking how they work before using them.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="skills.approach.step3Label" data-i18n-fa="مرحله ۰۳">Step 03</p>
+            <h3 class="timeline-title" data-i18n="skills.approach.step3Title" data-i18n-fa="آزمایش با کد">Experiment with code</h3>
+            <p class="timeline-body" data-i18n="skills.approach.step3Text" data-i18n-fa="آزمودن ایده‌های کوچک در کد تا ببینم چه چیزی تغییر می‌کند و دلیلش چیست.">Testing small ideas in code to see what changes, and why.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="skills.approach.step4Label" data-i18n-fa="مرحله ۰۴">Step 04</p>
+            <h3 class="timeline-title" data-i18n="skills.approach.step4Title" data-i18n-fa="ساختن پروژه‌های عملی">Build practical projects</h3>
+            <p class="timeline-body" data-i18n="skills.approach.step4Text" data-i18n-fa="تبدیل مفاهیم به پروژه‌های کامل، از آماده‌سازی داده تا رسیدن به نتیجه.">Turning concepts into complete projects, from data preparation to results.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="skills.approach.step5Label" data-i18n-fa="مرحله ۰۵">Step 05</p>
+            <h3 class="timeline-title" data-i18n="skills.approach.step5Title" data-i18n-fa="تحلیل نتایج">Analyze results</h3>
+            <p class="timeline-body" data-i18n="skills.approach.step5Text" data-i18n-fa="سنجیدن دقیق عملکرد و بررسی این‌که اعداد واقعاً چه چیزی را نشان می‌دهند.">Measuring performance carefully and examining what the numbers actually mean.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="skills.approach.step6Label" data-i18n-fa="مرحله ۰۶">Step 06</p>
+            <h3 class="timeline-title" data-i18n="skills.approach.step6Title" data-i18n-fa="بهبود از طریق تکرار">Improve through iteration</h3>
+            <p class="timeline-body" data-i18n="skills.approach.step6Text" data-i18n-fa="اصلاح هر نسخه بر پایه شواهد و سپس آزمودن دوباره.">Refining each version based on evidence, then trying again.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="exploring-next" aria-labelledby="next-title">
+      <div class="section-inner">
+        <header class="section-header section-header-center">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">04</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="skills.next.eyebrow" data-i18n-fa="علایق یادگیری">Learning Interests</span>
+          </p>
+          <h2 class="section-title" id="next-title" data-i18n="skills.next.title" data-i18n-fa="کاوش آنچه پیش رو است">Exploring What's Next</h2>
+          <p class="section-lead" data-i18n="skills.next.lead" data-i18n-fa="حوزه‌هایی که می‌خواهم عمیق‌تر کاوش کنم. این‌ها علایق یادگیری هستند، نه دستاوردهای تکمیل‌شده.">Areas I want to explore further. These are learning interests, not completed achievements.</p>
+        </header>
+
+        <div class="card-grid">
+          <article class="card" aria-labelledby="next-card-1-title">
+            <p class="card-meta" data-i18n="skills.next.meta" data-i18n-fa="علاقه یادگیری">Learning Interest</p>
+            <h3 class="card-title" id="next-card-1-title" data-i18n="skills.next.card1Title" data-i18n-fa="مفاهیم یادگیری ماشین پیشرفته">Advanced Machine Learning Concepts</h3>
+            <p class="card-text" data-i18n="skills.next.card1Text" data-i18n-fa="روش‌های عمیق‌تر، طراحی مدل و استدلال پشت انتخاب مدل‌ها.">Deeper methods, model design, and the reasoning behind model choices.</p>
+          </article>
+
+          <article class="card" aria-labelledby="next-card-2-title">
+            <p class="card-meta" data-i18n="skills.next.meta" data-i18n-fa="علاقه یادگیری">Learning Interest</p>
+            <h3 class="card-title" id="next-card-2-title" data-i18n="skills.next.card2Title" data-i18n-fa="بینایی ماشین">Computer Vision</h3>
+            <p class="card-text" data-i18n="skills.next.card2Text" data-i18n-fa="آموزش دادن به ماشین‌ها برای تفسیر دقیق‌تر تصاویر و ویدئو.">Teaching machines to interpret images and video with greater precision.</p>
+          </article>
+
+          <article class="card" aria-labelledby="next-card-3-title">
+            <p class="card-meta" data-i18n="skills.next.meta" data-i18n-fa="علاقه یادگیری">Learning Interest</p>
+            <h3 class="card-title" id="next-card-3-title" data-i18n="skills.next.card3Title" data-i18n-fa="پردازش زبان طبیعی">Natural Language Processing</h3>
+            <p class="card-text" data-i18n="skills.next.card3Text" data-i18n-fa="درک این‌که مدل‌ها چگونه زبان انسانی را می‌خوانند، ساختاربندی می‌کنند و تولید می‌کنند.">Understanding how models read, structure, and generate human language.</p>
+          </article>
+
+          <article class="card" aria-labelledby="next-card-4-title">
+            <p class="card-meta" data-i18n="skills.next.meta" data-i18n-fa="علاقه یادگیری">Learning Interest</p>
+            <h3 class="card-title" id="next-card-4-title" data-i18n="skills.next.card4Title" data-i18n-fa="هوش مصنوعی مولد">Generative AI</h3>
+            <p class="card-text" data-i18n="skills.next.card4Text" data-i18n-fa="کاوش در مدل‌های خلاقی که متن، تصویر و دیگر رسانه‌ها را تولید می‌کنند.">Exploring creative models that produce text, images, and other media.</p>
+          </article>
+
+          <article class="card" aria-labelledby="next-card-5-title">
+            <p class="card-meta" data-i18n="skills.next.meta" data-i18n-fa="علاقه یادگیری">Learning Interest</p>
+            <h3 class="card-title" id="next-card-5-title" data-i18n="skills.next.card5Title" data-i18n-fa="رباتیک">Robotics</h3>
+            <p class="card-text" data-i18n="skills.next.card5Text" data-i18n-fa="پیوند نرم‌افزار هوشمند با حسگرها، حرکت و سامانه‌های فیزیکی.">Connecting intelligent software with sensors, movement, and physical systems.</p>
+          </article>
+
+          <article class="card" aria-labelledby="next-card-6-title">
+            <p class="card-meta" data-i18n="skills.next.meta" data-i18n-fa="علاقه یادگیری">Learning Interest</p>
+            <h3 class="card-title" id="next-card-6-title" data-i18n="skills.next.card6Title" data-i18n-fa="معماری‌های شبکه عصبی">Neural Network Architectures</h3>
+            <p class="card-text" data-i18n="skills.next.card6Text" data-i18n-fa="بررسی این‌که طراحی‌های گوناگون شبکه عصبی برای چه نوع مسئله‌هایی مناسب‌اند.">Studying how different network designs suit different kinds of problems.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="call-to-action" aria-labelledby="skills-cta-title">
+      <div class="section-inner cta-inner">
+        <p class="section-eyebrow cta-eyebrow">
+          <span class="section-index" aria-hidden="true">05</span>
+          <span class="section-rule" aria-hidden="true"></span>
+          <span class="section-label" data-i18n="skills.cta.eyebrow" data-i18n-fa="ادامه">Continue</span>
+        </p>
+        <h2 class="cta-title" id="skills-cta-title" data-i18n="skills.cta.title" data-i18n-fa="کارهای پشت این مهارت‌ها را ببینید.">Explore the work behind the skills.</h2>
+        <p class="cta-text" data-i18n="skills.cta.text" data-i18n-fa="ببینید این مهارت‌ها در عمل چگونه به کار رفته‌اند، مسیر تحصیلی را دنبال کنید یا با من در تماس باشید.">See how these skills appear in practice, follow the educational path, or get in touch.</p>
+        <div class="cta-actions">
+          <a class="button button-primary" href="projects.html">
+            <span class="button-label" data-i18n="skills.cta.projects" data-i18n-fa="مشاهده پروژه‌ها">View Projects</span>
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a class="button button-secondary" href="education.html">
+            <span class="button-label" data-i18n="skills.cta.education" data-i18n-fa="مشاهده تحصیلات">View Education</span>
+          </a>
+          <a class="button button-secondary" href="contact.html">
+            <span class="button-label" data-i18n="skills.cta.contact" data-i18n-fa="ارتباط با من">Get in Touch</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#saina-mark"></use></svg>
+          <span class="brand-text">
+            <span class="brand-name" data-i18n="brand.name">Saina Bagheri</span>
+            <span class="brand-role" data-i18n="brand.role">Future AI Researcher</span>
+          </span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Exploring intelligence, one orbit at a time.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria-label="footer.nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a class="footer-link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="about.html" data-i18n="nav.about">About Me</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="education.html" data-i18n="nav.education">Education</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="skills.html" data-i18n="nav.skills">Skills & Learning</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="profiles.html" data-i18n="nav.profiles">Online Profiles</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-meta">
+        <p class="footer-copy" data-i18n="footer.copyright">© 2026 Saina Bagheri. All rights reserved.</p>
+        <a class="back-to-top" href="#skills-hero" data-i18n="footer.top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

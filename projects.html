@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Saina Bagheri</title>
+  <meta name="description" content="Selected AI and technology projects by Saina Bagheri, including SmartGym AI, a churn prediction project with a Custom CNN and a Random Forest comparison model, and an in-development educational game about AI ethics.">
+  <meta name="author" content="Saina Bagheri">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects | Saina Bagheri">
+  <meta property="og:description" content="Selected AI and technology projects by Saina Bagheri, Future AI Researcher.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="site-body page-projects">
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Skip to main content</a>
+
+  <svg class="svg-sprite" width="0" height="0" aria-hidden="true">
+    <defs>
+      <symbol id="saina-mark" viewBox="0 0 64 64">
+        <ellipse class="mark-orbit" cx="32" cy="32" rx="29" ry="11" transform="rotate(-24 32 32)" fill="none" stroke="currentColor" stroke-width="1.6"></ellipse>
+        <path class="mark-s" d="M46 17C46 10 18 10 18 22C18 33 46 31 46 42C46 54 18 54 18 47" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <circle class="mark-dot" cx="58.5" cy="20.2" r="2.6" fill="currentColor" stroke="none"></circle>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="ambient-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#saina-mark"></use></svg>
+        <span class="brand-text">
+          <span class="brand-name" data-i18n="brand.name">Saina Bagheri</span>
+          <span class="brand-role" data-i18n="brand.role">Future AI Researcher</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel">
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-i18n-aria-label="nav.primary">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="education.html" data-i18n="nav.education">Education</a></li>
+            <li class="nav-item"><a class="nav-link is-active" href="projects.html" aria-current="page" data-i18n="nav.projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="skills.html" data-i18n="nav.skills">Skills & Learning</a></li>
+            <li class="nav-item"><a class="nav-link" href="profiles.html" data-i18n="nav.profiles">Online Profiles</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <div class="control-group language-switch" id="language-switch" role="group" aria-label="Language" data-i18n-aria-label="controls.language">
+            <button class="control-button language-button is-active" id="lang-en" type="button" data-lang-option="en" aria-pressed="true" aria-label="English (EN)" data-i18n-aria-label="lang.enLabel">EN</button>
+            <button class="control-button language-button" id="lang-fa" type="button" data-lang-option="fa" aria-pressed="false" aria-label="Persian (FA)" data-i18n-aria-label="lang.faLabel">FA</button>
+          </div>
+
+          <div class="control-group theme-switch" id="theme-switch" role="group" aria-label="Theme" data-i18n-aria-label="controls.theme">
+            <button class="control-button theme-button is-active" id="theme-light" type="button" data-theme-option="light" aria-pressed="true" aria-label="Light theme" data-i18n-aria-label="theme.lightLabel">
+              <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+              <span class="control-label" data-i18n="theme.light">Light</span>
+            </button>
+            <button class="control-button theme-button" id="theme-dark" type="button" data-theme-option="dark" aria-pressed="false" aria-label="Dark theme" data-i18n-aria-label="theme.darkLabel">
+              <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <span class="control-label" data-i18n="theme.dark">Dark</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main-content" tabindex="-1">
+
+    <section class="page-hero" id="projects-hero" aria-labelledby="projects-title">
+      <div class="page-hero-inner">
+        <p class="section-eyebrow">
+          <span class="section-rule" aria-hidden="true"></span>
+          <span class="section-label" data-i18n="projects.hero.eyebrow" data-i18n-fa="پروژه‌ها">Projects</span>
+        </p>
+        <h1 class="page-title" id="projects-title" data-i18n="projects.hero.title" data-i18n-fa="پروژه‌های منتخب">Selected Projects</h1>
+        <p class="page-quote" data-i18n="projects.hero.quote" data-i18n-fa="«کنجکاوی را به نوآوری عملی تبدیل می‌کنیم.»">“Turning curiosity into practical innovation.”</p>
+        <p class="page-lead" data-i18n="projects.hero.lead" data-i18n-fa="پروژه‌های عملی، ایده‌ها و دانش فنی را به کاربردهای واقعی تبدیل می‌کنند. هر پروژه در این صفحه از یک مسیر مشترک پیروی می‌کند: تعریف مسئله، آماده‌سازی داده، ساخت و ارزیابی مدل، یادگیری از هر آزمایش و بهبود گام‌به‌گام راه‌حل.">Practical projects turn ideas and technical knowledge into working applications. Each project below follows the same path: define the problem, prepare the data, build and evaluate models, learn from every experiment, and improve the solution step by step.</p>
+      </div>
+    </section>
+
+    <section class="section featured-project" id="smartgym-ai" aria-labelledby="smartgym-title">
+      <div class="section-inner">
+        <header class="section-header section-header-split">
+          <div class="section-heading-block">
+            <p class="section-eyebrow">
+              <span class="section-index" aria-hidden="true">01</span>
+              <span class="section-rule" aria-hidden="true"></span>
+              <span class="section-label" data-i18n="projects.smartgym.eyebrow" data-i18n-fa="پروژه برجسته">Featured Project</span>
+            </p>
+            <h2 class="section-title" id="smartgym-title">SmartGym AI</h2>
+          </div>
+          <p class="section-lead" data-i18n="projects.smartgym.subtitle" data-i18n-fa="مدیریت هوشمند باشگاه و پیش‌بینی ریزش اعضا">Intelligent Gym Management & Churn Prediction</p>
+        </header>
+
+        <div class="project-feature">
+          <div class="project-feature-media">
+            <div class="project-visual" aria-hidden="true">
+              <svg class="project-mark" viewBox="0 0 64 64"><use href="#saina-mark"></use></svg>
+            </div>
+          </div>
+
+          <div class="project-feature-body">
+            <p class="project-meta">
+              <span class="project-number">01</span>
+              <span class="project-status" data-i18n="projects.smartgym.status" data-i18n-fa="نتایج گزارش‌شده">Results Reported</span>
+            </p>
+            <p class="project-text" data-i18n="projects.smartgym.summary" data-i18n-fa="پروژه‌ای یادگیری ماشین و یادگیری عمیق برای تحلیل اطلاعات اعضای باشگاه، برآورد احتمال ریزش مشتری، شناسایی اعضایی که ممکن است عضویتشان را تمدید نکنند و ارائه بینش‌های مفید از طریق تجسم داده.">A machine-learning and deep-learning project designed to analyze gym member information, estimate the probability of customer churn, identify members who may be at risk of not renewing, and present useful insights through data visualization.</p>
+
+            <dl class="fact-list">
+              <div class="fact-item">
+                <dt class="fact-label" data-i18n="projects.smartgym.factDataset" data-i18n-fa="داده‌ها">Dataset</dt>
+                <dd class="fact-value" data-i18n="projects.smartgym.factDatasetValue" data-i18n-fa="4,000 رکورد">4,000 records</dd>
+              </div>
+              <div class="fact-item">
+                <dt class="fact-label" data-i18n="projects.smartgym.factCore" data-i18n-fa="مدل اصلی">Core model</dt>
+                <dd class="fact-value" data-i18n="projects.smartgym.factCoreValue" data-i18n-fa="Custom CNN با TensorFlow / Keras">Custom CNN with TensorFlow / Keras</dd>
+              </div>
+              <div class="fact-item">
+                <dt class="fact-label" data-i18n="projects.smartgym.factCompare" data-i18n-fa="مدل مقایسه‌ای">Comparison model</dt>
+                <dd class="fact-value" data-i18n="projects.smartgym.factCompareValue" data-i18n-fa="جنگل تصادفی (Random Forest)">Random Forest</dd>
+              </div>
+            </dl>
+
+            <a class="text-link" href="#smartgym-performance">
+              <span class="text-link-label" data-i18n="projects.smartgym.viewResults" data-i18n-fa="مشاهده نتایج عملکرد">View Performance Results</span>
+              <svg class="text-link-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-showcase" id="smartgym-details">
+
+          <section class="project-block" id="smartgym-overview" aria-labelledby="smartgym-overview-title">
+            <div class="section-heading-block">
+              <p class="section-eyebrow"><span class="section-index" aria-hidden="true">A</span><span class="section-rule" aria-hidden="true"></span></p>
+              <h3 class="project-title" id="smartgym-overview-title" data-i18n="projects.overview.title" data-i18n-fa="نمای کلی">Overview</h3>
+            </div>
+            <p class="section-lead" data-i18n="projects.overview.text" data-i18n-fa="SmartGym AI اطلاعات اعضای باشگاه را تحلیل می‌کند تا احتمال ریزش هر عضو را برآورد کند و کسانی را که ممکن است تمدید نکنند شناسایی نماید. این پروژه پیش‌پردازش داده، مهندسی ویژگی، یک شبکه عصبی پیچشی سفارشی، مدل مقایسه‌ای جنگل تصادفی، تنظیم آستانه و تجسم داده را با هم ترکیب می‌کند و نتایج را از طریق یک موتور پیش‌بینی و نمودارهای داده ارائه می‌دهد.">SmartGym AI analyzes gym member information to estimate each member's probability of churn and identify those who may be at risk of not renewing. The project combines data preprocessing, feature engineering, a custom convolutional neural network, a Random Forest comparison model, threshold tuning, and data visualization, and presents its results through a prediction engine and clear visual summaries.</p>
+            <p class="project-text" data-i18n="projects.overview.note" data-i18n-fa="این سامانه در یک باشگاه واقعی به کار گرفته نشده است. نتایج از ارزیابی فعلی همین پروژه به دست آمده‌اند و به‌صورت مستقل راستی‌آزمایی نشده‌اند.">This system has not been deployed in a real gym. The results come from the current project evaluation and have not been independently validated.</p>
+          </section>
+
+          <section class="project-block" id="smartgym-problem" aria-labelledby="smartgym-problem-title">
+            <div class="section-heading-block">
+              <p class="section-eyebrow"><span class="section-index" aria-hidden="true">B</span><span class="section-rule" aria-hidden="true"></span></p>
+              <h3 class="project-title" id="smartgym-problem-title" data-i18n="projects.problem.title" data-i18n-fa="بیان مسئله">Problem Statement</h3>
+            </div>
+            <p class="section-lead" data-i18n="projects.problem.text" data-i18n-fa="تمدید عضویت برای پایداری باشگاه اهمیت اساسی دارد، اما نشانه‌های اولیه ترک احتمالی یک عضو معمولاً در اطلاعات پراکنده‌اند و دیر دیده می‌شوند. چالش این است که این اطلاعات به یک احتمال ریزش تبدیل شود که بتوان آن را بررسی، رتبه‌بندی و توضیح داد تا اعضای در معرض خطر زودتر شناسایی شوند.">Membership renewal is central to a gym's stability, yet the early signs that a member may leave are often scattered across member information and noticed too late. The challenge is to convert that information into a churn probability that can be reviewed, ranked, and explained, so that members at risk can be identified sooner.</p>
+          </section>
+
+          <section class="project-block" id="smartgym-objectives" aria-labelledby="smartgym-objectives-title">
+            <div class="section-heading-block">
+              <p class="section-eyebrow"><span class="section-index" aria-hidden="true">C</span><span class="section-rule" aria-hidden="true"></span></p>
+              <h3 class="project-title" id="smartgym-objectives-title" data-i18n="projects.objectives.title" data-i18n-fa="اهداف پروژه">Project Objectives</h3>
+            </div>
+            <div class="card-grid objective-grid">
+              <article class="card objective-card">
+                <p class="card-meta" data-i18n="projects.objectives.label1" data-i18n-fa="هدف 01">Objective 01</p>
+                <p class="card-text" data-i18n="projects.objectives.item1" data-i18n-fa="تحلیل اطلاعات اعضای باشگاه و آماده‌سازی آن برای مدل‌سازی.">Analyze gym member information and prepare it for modelling.</p>
+              </article>
+              <article class="card objective-card">
+                <p class="card-meta" data-i18n="projects.objectives.label2" data-i18n-fa="هدف 02">Objective 02</p>
+                <p class="card-text" data-i18n="projects.objectives.item2" data-i18n-fa="برآورد احتمال ریزش برای هر عضو.">Estimate the probability of churn for each member.</p>
+              </article>
+              <article class="card objective-card">
+                <p class="card-meta" data-i18n="projects.objectives.label3" data-i18n-fa="هدف 03">Objective 03</p>
+                <p class="card-text" data-i18n="projects.objectives.item3" data-i18n-fa="طبقه‌بندی اعضا در سطوح ریسک برای برجسته‌سازی کسانی که ممکن است به توجه بیشتری نیاز داشته باشند.">Classify members into risk levels to highlight those who may need attention.</p>
+              </article>
+              <article class="card objective-card">
+                <p class="card-meta" data-i18n="projects.objectives.label4" data-i18n-fa="هدف 04">Objective 04</p>
+                <p class="card-text" data-i18n="projects.objectives.item4" data-i18n-fa="مقایسه یک CNN سفارشی با مدل مقایسه‌ای جنگل تصادفی.">Compare a custom CNN with a Random Forest comparison model.</p>
+              </article>
+              <article class="card objective-card">
+                <p class="card-meta" data-i18n="projects.objectives.label5" data-i18n-fa="هدف 05">Objective 05</p>
+                <p class="card-text" data-i18n="projects.objectives.item5" data-i18n-fa="تنظیم آستانه تصمیم و ارزیابی عملکرد با چند معیار.">Tune the decision threshold and evaluate performance with several metrics.</p>
+              </article>
+              <article class="card objective-card">
+                <p class="card-meta" data-i18n="projects.objectives.label6" data-i18n-fa="هدف 06">Objective 06</p>
+                <p class="card-text" data-i18n="projects.objectives.item6" data-i18n-fa="ارائه بینش‌ها از طریق نمودارهای داده روشن و قابل فهم.">Present insights through clear data visualizations.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="project-block" id="smartgym-technologies" aria-labelledby="smartgym-technologies-title">
+            <div class="section-heading-block">
+              <p class="section-eyebrow"><span class="section-index" aria-hidden="true">D</span><span class="section-rule" aria-hidden="true"></span></p>
+              <h3 class="project-title" id="smartgym-technologies-title" data-i18n="projects.technologies.title" data-i18n-fa="فناوری‌ها و ابزارها">Technologies & Tools</h3>
+            </div>
+            <ul class="tag-list" aria-labelledby="smartgym-technologies-title">
+              <li class="tag">Python</li>
+              <li class="tag">TensorFlow / Keras</li>
+              <li class="tag">NumPy</li>
+              <li class="tag">Pandas</li>
+              <li class="tag">Matplotlib</li>
+              <li class="tag">Seaborn</li>
+              <li class="tag">Scikit-learn</li>
+              <li class="tag">Jupyter Notebook</li>
+            </ul>
+          </section>
+
+          <section class="project-block" id="smartgym-development" aria-labelledby="smartgym-development-title">
+            <div class="section-heading-block">
+              <p class="section-eyebrow"><span class="section-index" aria-hidden="true">E</span><span class="section-rule" aria-hidden="true"></span></p>
+              <h3 class="project-title" id="smartgym-development-title" data-i18n="projects.development.title" data-i18n-fa="توسعه مدل">Model Development</h3>
+            </div>
+            <p class="section-lead" data-i18n="projects.development.lead" data-i18n-fa="این پروژه در مراحل زیر توسعه یافته است.">The project was developed through the following stages.</p>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <p class="timeline-date"><span data-i18n="projects.stage.word" data-i18n-fa="مرحله">Stage</span> 01</p>
+                <h4 class="timeline-title" data-i18n="projects.stage1.title" data-i18n-fa="پیش‌پردازش داده">Data Preprocessing</h4>
+                <p class="timeline-body" data-i18n="projects.stage1.text" data-i18n-fa="آماده‌سازی 4,000 رکورد عضو برای مدل‌سازی.">Preparing 4,000 member records for modelling.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date"><span data-i18n="projects.stage.word" data-i18n-fa="مرحله">Stage</span> 02</p>
+                <h4 class="timeline-title" data-i18n="projects.stage2.title" data-i18n-fa="مهندسی ویژگی">Feature Engineering</h4>
+                <p class="timeline-body" data-i18n="projects.stage2.text" data-i18n-fa="ساخت ورودی‌های مناسب مدل از اطلاعات موجود اعضا.">Creating model inputs from the available member information.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date"><span data-i18n="projects.stage.word" data-i18n-fa="مرحله">Stage</span> 03</p>
+                <h4 class="timeline-title" data-i18n="projects.stage3.title" data-i18n-fa="CNN سفارشی">Custom CNN</h4>
+                <p class="timeline-body" data-i18n="projects.stage3.text" data-i18n-fa="توسعه یک شبکه عصبی پیچشی با TensorFlow / Keras برای برآورد احتمال ریزش.">Developing a convolutional neural network with TensorFlow / Keras to estimate churn probability.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date"><span data-i18n="projects.stage.word" data-i18n-fa="مرحله">Stage</span> 04</p>
+                <h4 class="timeline-title" data-i18n="projects.stage4.title" data-i18n-fa="مقایسه با جنگل تصادفی">Random Forest Comparison</h4>
+                <p class="timeline-body" data-i18n="projects.stage4.text" data-i18n-fa="پیاده‌سازی مدل جنگل تصادفی به‌عنوان نقطه مقایسه برای CNN.">Implementing a Random Forest model as a comparison point for the CNN.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date"><span data-i18n="projects.stage.word" data-i18n-fa="مرحله">Stage</span> 05</p>
+                <h4 class="timeline-title" data-i18n="projects.stage5.title" data-i18n-fa="تنظیم آستانه">Threshold Tuning</h4>
+                <p class="timeline-body" data-i18n="projects.stage5.text" data-i18n-fa="تنظیم آستانه تصمیم‌گیری برای طبقه‌بندی اعضا در گروه‌های ریسک.">Tuning the decision threshold used to classify members into risk groups.</p>
+              </li>
+              <li class="timeline-item">
+                <p class="timeline-date"><span data-i18n="projects.stage.word" data-i18n-fa="مرحله">Stage</span> 06</p>
+                <h4 class="timeline-title" data-i18n="projects.stage6.title" data-i18n-fa="ارزیابی و تجسم داده">Evaluation & Visualization</h4>
+                <p class="timeline-body" data-i18n="projects.stage6.text" data-i18n-fa="ارزیابی عملکرد و ارائه بینش‌ها از طریق نمودارها و موتور پیش‌بینی.">Evaluating performance and presenting insights through visualizations and a prediction engine.</p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="project-block project-results" id="smartgym-performance" aria-labelledby="smartgym-performance-title">
+            <div class="section-heading-block">
+              <p class="section-eyebrow"><span class="section-index" aria-hidden="true">F</span><span class="section-rule" aria-hidden="true"></span></p>
+              <h3 class="project-title" id="smartgym-performance-title" data-i18n="projects.performance.title" data-i18n-fa="نتایج عملکرد">Performance Results</h3>
+            </div>
+            <p class="section-lead" data-i18n="projects.performance.lead" data-i18n-fa="نتایج زیر از ارزیابی فعلی مدل‌های این پروژه روی داده‌های آزمون به دست آمده‌اند. این نتایج فقط مربوط به همین پروژه‌اند و به‌صورت مستقل راستی‌آزمایی یا با سامانه‌های صنعتی مقایسه نشده‌اند.">The results below come from the current project evaluation of the models on test data. They describe this project only and have not been independently verified or compared with industry systems.</p>
+
+            <h4 class="card-title" id="cnn-results-title" data-i18n="projects.performance.cnnTitle" data-i18n-fa="نتایج آزمون Custom CNN">Custom CNN Test Results</h4>
+            <div class="card-grid metric-grid" aria-labelledby="cnn-results-title">
+              <article class="card metric-card">
+                <p class="card-meta" data-i18n="projects.metric.accuracy" data-i18n-fa="دقت کلی (Accuracy)">Accuracy</p>
+                <p class="card-title metric-value">93.00%</p>
+                <p class="card-text" data-i18n="projects.metric.accuracyText" data-i18n-fa="نسبت کل پیش‌بینی‌های درست به کل پیش‌بینی‌ها.">The proportion of all predictions that were correct.</p>
+              </article>
+              <article class="card metric-card">
+                <p class="card-meta" data-i18n="projects.metric.precision" data-i18n-fa="دقت مثبت (Precision)">Precision</p>
+                <p class="card-title metric-value">86.79%</p>
+                <p class="card-text" data-i18n="projects.metric.precisionText" data-i18n-fa="از اعضایی که ریزش‌شان پیش‌بینی شده، چه نسبتی واقعاً ریزش کرده‌اند.">Of the members predicted to churn, the share who actually churned.</p>
+              </article>
+              <article class="card metric-card">
+                <p class="card-meta" data-i18n="projects.metric.recall" data-i18n-fa="بازیابی (Recall)">Recall</p>
+                <p class="card-title metric-value">86.79%</p>
+                <p class="card-text" data-i18n="projects.metric.recallText" data-i18n-fa="از اعضایی که واقعاً ریزش کرده‌اند، چه نسبتی توسط مدل شناسایی شده‌اند.">Of the members who actually churned, the share the model identified.</p>
+              </article>
+              <article class="card metric-card">
+                <p class="card-meta" data-i18n="projects.metric.f1" data-i18n-fa="امتیاز F1 (F1-score)">F1-score</p>
+                <p class="card-title metric-value">86.79%</p>
+                <p class="card-text" data-i18n="projects.metric.f1Text" data-i18n-fa="میانگین هماهنگ Precision و Recall.">The harmonic mean of precision and recall.</p>
+              </article>
+              <article class="card metric-card">
+                <p class="card-meta" data-i18n="projects.metric.roc" data-i18n-fa="سطح زیر منحنی ROC (ROC-AUC)">ROC-AUC</p>
+                <p class="card-title metric-value">0.9671</p>
+                <p class="card-text" data-i18n="projects.metric.rocText" data-i18n-fa="توانایی مدل در رتبه‌بندی اعضای با احتمال ریزش بالاتر از سایر اعضا در همه آستانه‌ها.">How well the model ranks likely churners above other members across all thresholds.</p>
+              </article>
+              <article class="card metric-card">
+                <p class="card-meta" data-i18n="projects.metric.pr" data-i18n-fa="سطح زیر منحنی PR (PR-AUC)">PR-AUC</p>
+                <p class="card-title metric-value">0.9368</p>
+                <p class="card-text" data-i18n="projects.metric.prText" data-i18n-fa="خلاصه‌ای از مبادله میان Precision و Recall در همه آستانه‌ها.">A summary of the precision–recall trade-off across all thresholds.</p>
+              </article>
+            </div>
+
+            <div class="card compare-panel">
+              <h4 class="card-title" id="comparison-title" data-i18n="projects.compare.title" data-i18n-fa="Custom CNN در برابر جنگل تصادفی">Custom CNN vs Random Forest</h4>
+              <p class="card-text" data-i18n="projects.compare.legend" data-i18n-fa="هر نوار یک مقدار گزارش‌شده را روی مقیاس 0 تا 1 نشان می‌دهد تا درصدها و امتیازهای AUC به‌طور مستقیم قابل مقایسه باشند. نوار تیره‌تر مربوط به Custom CNN و نوار روشن‌تر مربوط به جنگل تصادفی است. اختلاف، تفاوت Custom CNN منهای جنگل تصادفی را نشان می‌دهد.">Each bar shows a reported value on a 0 to 1 scale, so percentages and AUC scores can be compared directly. The darker bar is Custom CNN and the lighter bar is Random Forest. Difference shows Custom CNN minus Random Forest.</p>
+
+              <div class="compare-list" role="list" aria-labelledby="comparison-title">
+
+                <div class="compare-item" role="listitem">
+                  <p class="compare-metric" data-i18n="projects.metric.accuracy" data-i18n-fa="دقت کلی (Accuracy)">Accuracy</p>
+                  <div class="compare-row is-primary">
+                    <span class="compare-model">Custom CNN</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="93" height="4" fill="currentColor"></rect>
+                    </svg>
+                    <span class="compare-value">93.00%</span>
+                  </div>
+                  <div class="compare-row is-secondary">
+                    <span class="compare-model" data-i18n="projects.compare.rf" data-i18n-fa="جنگل تصادفی">Random Forest</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="89.5" height="4" fill="currentColor" opacity="0.5"></rect>
+                    </svg>
+                    <span class="compare-value">89.50%</span>
+                  </div>
+                  <p class="compare-delta"><span class="compare-delta-label" data-i18n="projects.compare.difference" data-i18n-fa="اختلاف">Difference</span> <span class="compare-delta-value" data-i18n="projects.compare.pts" data-i18n-fa="+3.50 امتیاز درصد">+3.50 pts</span></p>
+                </div>
+
+                <div class="compare-item" role="listitem">
+                  <p class="compare-metric" data-i18n="projects.metric.precision" data-i18n-fa="دقت مثبت (Precision)">Precision</p>
+                  <div class="compare-row is-primary">
+                    <span class="compare-model">Custom CNN</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="86.79" height="4" fill="currentColor"></rect>
+                    </svg>
+                    <span class="compare-value">86.79%</span>
+                  </div>
+                  <div class="compare-row is-secondary">
+                    <span class="compare-model" data-i18n="projects.compare.rf" data-i18n-fa="جنگل تصادفی">Random Forest</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="76.97" height="4" fill="currentColor" opacity="0.5"></rect>
+                    </svg>
+                    <span class="compare-value">76.97%</span>
+                  </div>
+                  <p class="compare-delta"><span class="compare-delta-label" data-i18n="projects.compare.difference" data-i18n-fa="اختلاف">Difference</span> <span class="compare-delta-value" data-i18n="projects.compare.pts" data-i18n-fa="+9.82 امتیاز درصد">+9.82 pts</span></p>
+                </div>
+
+                <div class="compare-item" role="listitem">
+                  <p class="compare-metric" data-i18n="projects.metric.recall" data-i18n-fa="بازیابی (Recall)">Recall</p>
+                  <div class="compare-row is-primary">
+                    <span class="compare-model">Custom CNN</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="86.79" height="4" fill="currentColor"></rect>
+                    </svg>
+                    <span class="compare-value">86.79%</span>
+                  </div>
+                  <div class="compare-row is-secondary">
+                    <span class="compare-model" data-i18n="projects.compare.rf" data-i18n-fa="جنگل تصادفی">Random Forest</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="86.16" height="4" fill="currentColor" opacity="0.5"></rect>
+                    </svg>
+                    <span class="compare-value">86.16%</span>
+                  </div>
+                  <p class="compare-delta"><span class="compare-delta-label" data-i18n="projects.compare.difference" data-i18n-fa="اختلاف">Difference</span> <span class="compare-delta-value" data-i18n="projects.compare.pts" data-i18n-fa="+0.63 امتیاز درصد">+0.63 pts</span></p>
+                </div>
+
+                <div class="compare-item" role="listitem">
+                  <p class="compare-metric" data-i18n="projects.metric.f1" data-i18n-fa="امتیاز F1 (F1-score)">F1-score</p>
+                  <div class="compare-row is-primary">
+                    <span class="compare-model">Custom CNN</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="86.79" height="4" fill="currentColor"></rect>
+                    </svg>
+                    <span class="compare-value">86.79%</span>
+                  </div>
+                  <div class="compare-row is-secondary">
+                    <span class="compare-model" data-i18n="projects.compare.rf" data-i18n-fa="جنگل تصادفی">Random Forest</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="81.31" height="4" fill="currentColor" opacity="0.5"></rect>
+                    </svg>
+                    <span class="compare-value">81.31%</span>
+                  </div>
+                  <p class="compare-delta"><span class="compare-delta-label" data-i18n="projects.compare.difference" data-i18n-fa="اختلاف">Difference</span> <span class="compare-delta-value" data-i18n="projects.compare.pts" data-i18n-fa="+5.48 امتیاز درصد">+5.48 pts</span></p>
+                </div>
+
+                <div class="compare-item" role="listitem">
+                  <p class="compare-metric" data-i18n="projects.metric.roc" data-i18n-fa="سطح زیر منحنی ROC (ROC-AUC)">ROC-AUC</p>
+                  <div class="compare-row is-primary">
+                    <span class="compare-model">Custom CNN</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="96.71" height="4" fill="currentColor"></rect>
+                    </svg>
+                    <span class="compare-value">0.9671</span>
+                  </div>
+                  <div class="compare-row is-secondary">
+                    <span class="compare-model" data-i18n="projects.compare.rf" data-i18n-fa="جنگل تصادفی">Random Forest</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="96.46" height="4" fill="currentColor" opacity="0.5"></rect>
+                    </svg>
+                    <span class="compare-value">0.9646</span>
+                  </div>
+                  <p class="compare-delta"><span class="compare-delta-label" data-i18n="projects.compare.difference" data-i18n-fa="اختلاف">Difference</span> <span class="compare-delta-value">+0.0025</span></p>
+                </div>
+
+                <div class="compare-item" role="listitem">
+                  <p class="compare-metric" data-i18n="projects.metric.pr" data-i18n-fa="سطح زیر منحنی PR (PR-AUC)">PR-AUC</p>
+                  <div class="compare-row is-primary">
+                    <span class="compare-model">Custom CNN</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="93.68" height="4" fill="currentColor"></rect>
+                    </svg>
+                    <span class="compare-value">0.9368</span>
+                  </div>
+                  <div class="compare-row is-secondary">
+                    <span class="compare-model" data-i18n="projects.compare.rf" data-i18n-fa="جنگل تصادفی">Random Forest</span>
+                    <svg class="compare-bar" viewBox="0 0 100 4" preserveAspectRatio="none" width="100%" height="8" aria-hidden="true">
+                      <rect x="0" y="0" width="100" height="4" fill="currentColor" opacity="0.1"></rect>
+                      <rect x="0" y="0" width="92.45" height="4" fill="currentColor" opacity="0.5"></rect>
+                    </svg>
+                    <span class="compare-value">0.9245</span>
+                  </div>
+                  <p class="compare-delta"><span class="compare-delta-label" data-i18n="projects.compare.difference" data-i18n-fa="اختلاف">Difference</span> <span class="compare-delta-value">+0.0123</span></p>
+                </div>
+
+              </div>
+
+              <p class="compare-summary" data-i18n="projects.compare.summary" data-i18n-fa="در این ارزیابی، Custom CNN در هر شش معیار مقدار بالاتری نسبت به جنگل تصادفی گزارش کرده است. در میان معیارهای درصدی، بیشترین اختلاف مربوط به Precision است (+9.82 امتیاز درصد). این نتایج از ارزیابی فعلی همین پروژه به دست آمده‌اند و به‌صورت مستقل راستی‌آزمایی نشده‌اند.">In this evaluation, Custom CNN reports higher values than Random Forest on all six metrics. Among the percentage metrics, the largest difference is in precision (+9.82 points). These results come from the current project evaluation and have not been independently verified.</p>
+            </div>
+          </section>
+
+          <section class="project-block" id="smartgym-learning" aria-labelledby="smartgym-learning-title">
+            <div class="section-heading-block">
+              <p class="section-eyebrow"><span class="section-index" aria-hidden="true">G</span><span class="section-rule" aria-hidden="true"></span></p>
+              <h3 class="project-title" id="smartgym-learning-title" data-i18n="projects.learning.title" data-i18n-fa="دستاوردهای یادگیری کلیدی">Key Learning Outcomes</h3>
+            </div>
+            <div class="card-grid learning-grid">
+              <article class="card learning-card">
+                <p class="card-meta" data-i18n="projects.learning.label1" data-i18n-fa="درس 01">Lesson 01</p>
+                <p class="card-text" data-i18n="projects.learning.item1" data-i18n-fa="پیش‌پردازش و مهندسی ویژگی تعیین می‌کنند که مدل چه چیزی می‌تواند بیاموزد.">Preprocessing and feature engineering shape what a model can learn.</p>
+              </article>
+              <article class="card learning-card">
+                <p class="card-meta" data-i18n="projects.learning.label2" data-i18n-fa="درس 02">Lesson 02</p>
+                <p class="card-text" data-i18n="projects.learning.item2" data-i18n-fa="یک مدل یادگیری عمیق باید با یک مدل پایه ساده‌تر مانند جنگل تصادفی سنجیده شود.">A deep-learning model should be measured against a simpler baseline such as Random Forest.</p>
+              </article>
+              <article class="card learning-card">
+                <p class="card-meta" data-i18n="projects.learning.label3" data-i18n-fa="درس 03">Lesson 03</p>
+                <p class="card-text" data-i18n="projects.learning.item3" data-i18n-fa="احتمال زمانی کاربردی می‌شود که آستانه تصمیم انتخاب شود؛ و این انتخاب بر Precision و Recall اثر می‌گذارد.">A probability becomes actionable only once a decision threshold is chosen, and that choice changes precision and recall.</p>
+              </article>
+              <article class="card learning-card">
+                <p class="card-meta" data-i18n="projects.learning.label4" data-i18n-fa="درس 04">Lesson 04</p>
+                <p class="card-text" data-i18n="projects.learning.item4" data-i18n-fa="تنها دقت کلی کافی نیست: هر معیار جنبه‌ای متفاوت از عملکرد را نشان می‌دهد.">Accuracy alone is not enough: each metric reveals a different aspect of performance.</p>
+              </article>
+              <article class="card learning-card">
+                <p class="card-meta" data-i18n="projects.learning.label5" data-i18n-fa="درس 05">Lesson 05</p>
+                <p class="card-text" data-i18n="projects.learning.item5" data-i18n-fa="تجسم روشن داده، خروجی مدل را برای خوانندگان غیرمتخصص قابل‌فهم‌تر می‌کند.">Clear visualization makes model output easier to interpret for non-specialist readers.</p>
+              </article>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="section ethics-project" id="ai-ethics-game" aria-labelledby="ethics-title">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">02</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="projects.ethics.eyebrow" data-i18n-fa="پروژه گروهی">Team Project</span>
+          </p>
+          <h2 class="section-title" id="ethics-title" data-i18n="projects.ethics.title" data-i18n-fa="هوش مصنوعی: فرصت‌ها و معضلات اخلاقی">AI: Opportunities & Ethical Dilemmas</h2>
+        </header>
+
+        <article class="card project-feature is-reversed ethics-card">
+          <div class="project-feature-media">
+            <div class="project-visual" aria-hidden="true">
+              <svg class="project-mark" viewBox="0 0 64 64"><use href="#saina-mark"></use></svg>
+            </div>
+          </div>
+
+          <div class="project-feature-body">
+            <p class="project-meta">
+              <span class="project-number">02</span>
+              <span class="project-status" data-i18n="projects.ethics.status" data-i18n-fa="در حال توسعه">In Development</span>
+            </p>
+
+            <p class="card-meta" data-i18n="projects.ethics.overviewLabel" data-i18n-fa="نمای کلی پروژه">Project Overview</p>
+            <p class="card-text" data-i18n="projects.ethics.overview" data-i18n-fa="یک بازی آموزشی گروهی که هوش مصنوعی، فرصت‌ها و چالش‌های اخلاقی آن را بررسی می‌کند. این پروژه به‌صورت گروهی سه‌نفره در مدرسه در حال توسعه است.">A collaborative educational game exploring artificial intelligence, its opportunities, and the ethical challenges it raises. The project is being developed as a three-person school team project.</p>
+
+            <p class="card-meta" data-i18n="projects.ethics.goalsLabel" data-i18n-fa="اهداف آموزشی اصلی">Main Educational Goals</p>
+            <div class="objective-list">
+              <p class="card-text" data-i18n="projects.ethics.goal1" data-i18n-fa="به بازیکنان کمک کند بفهمند هوش مصنوعی چه کارهایی می‌تواند انجام دهد و محدودیت‌هایش کجاست.">Help players understand what AI can do and where its limits lie.</p>
+              <p class="card-text" data-i18n="projects.ethics.goal2" data-i18n-fa="استدلال درباره مبادله‌ها میان مزایا و خطرها را تشویق کند.">Encourage reasoning about trade-offs between benefits and risks.</p>
+              <p class="card-text" data-i18n="projects.ethics.goal3" data-i18n-fa="آگاهی از پرسش‌های اخلاقی مانند سوگیری، حریم خصوصی و پاسخگویی را افزایش دهد.">Raise awareness of ethical questions such as bias, privacy, and accountability.</p>
+            </div>
+
+            <p class="card-meta" id="ethics-topics-label" data-i18n="projects.ethics.topicsLabel" data-i18n-fa="موضوعات کلیدی">Key Topics</p>
+            <ul class="tag-list" aria-labelledby="ethics-topics-label">
+              <li class="tag" data-i18n="projects.ethics.topic1" data-i18n-fa="هوش مصنوعی و آینده کار">AI and the Future of Work</li>
+              <li class="tag" data-i18n="projects.ethics.topic2" data-i18n-fa="هوش مصنوعی و آموزش">AI and Education</li>
+              <li class="tag" data-i18n="projects.ethics.topic3" data-i18n-fa="سوگیری الگوریتمی">Algorithmic Bias</li>
+              <li class="tag" data-i18n="projects.ethics.topic4" data-i18n-fa="حریم خصوصی">Privacy</li>
+              <li class="tag" data-i18n="projects.ethics.topic5" data-i18n-fa="پاسخگویی">Accountability</li>
+              <li class="tag" data-i18n="projects.ethics.topic6" data-i18n-fa="هوش مصنوعی در سلامت">AI in Healthcare</li>
+              <li class="tag" data-i18n="projects.ethics.topic7" data-i18n-fa="هوش مصنوعی و چالش‌های جهانی مانند فقر">AI and Global Challenges such as Poverty</li>
+            </ul>
+
+            <p class="card-meta" data-i18n="projects.ethics.statusLabel" data-i18n-fa="وضعیت توسعه">Development Status</p>
+            <p class="card-text" data-i18n="projects.ethics.statusText" data-i18n-fa="در حال توسعه. این بازی توسط یک تیم سه‌نفره مدرسه ساخته می‌شود و هنوز منتشر یا مستقر نشده است. دامنه نهایی آن در حال شکل‌گیری است.">In development. The game is being built by a three-person school team and has not been published or deployed. Its final scope is still being shaped.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="behind-the-projects" aria-labelledby="behind-title">
+      <div class="section-inner">
+        <header class="section-header section-header-center">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">03</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="projects.behind.eyebrow" data-i18n-fa="فرایند">Process</span>
+          </p>
+          <h2 class="section-title" id="behind-title" data-i18n="projects.behind.title" data-i18n-fa="پشت پروژه‌ها">Behind the Projects</h2>
+          <p class="section-lead" data-i18n="projects.behind.lead" data-i18n-fa="پروژه‌های خوب، با وجود تفاوت ابزارها، ریتم کاری مشترکی دارند.">Good projects share a working rhythm, even when the tools differ.</p>
+        </header>
+
+        <div class="card-grid process-grid">
+          <article class="card process-card">
+            <p class="card-meta" data-i18n="projects.process.label1" data-i18n-fa="گام 01">Step 01</p>
+            <h3 class="card-title" data-i18n="projects.process.title1" data-i18n-fa="درک مسئله">Understanding the Problem</h3>
+            <p class="card-text" data-i18n="projects.process.text1" data-i18n-fa="پیش از انتخاب ابزار یا مدل، پرسش، زمینه و شکل یک نتیجه مفید را روشن کنید.">Define the question, the context, and what a useful result would look like before choosing tools or models.</p>
+          </article>
+          <article class="card process-card">
+            <p class="card-meta" data-i18n="projects.process.label2" data-i18n-fa="گام 02">Step 02</p>
+            <h3 class="card-title" data-i18n="projects.process.title2" data-i18n-fa="کاوش و آماده‌سازی داده">Exploring & Preparing Data</h3>
+            <p class="card-text" data-i18n="projects.process.text2" data-i18n-fa="رکوردها را بررسی کنید، ناسازگاری‌ها را رفع کنید و ویژگی‌هایی بسازید که یادگیری الگوها را آسان‌تر کند.">Inspect the records, resolve inconsistencies, and engineer features that make patterns easier to learn.</p>
+          </article>
+          <article class="card process-card">
+            <p class="card-meta" data-i18n="projects.process.label3" data-i18n-fa="گام 03">Step 03</p>
+            <h3 class="card-title" data-i18n="projects.process.title3" data-i18n-fa="توسعه و ارزیابی مدل‌ها">Developing & Evaluating Models</h3>
+            <p class="card-text" data-i18n="projects.process.text3" data-i18n-fa="مدل‌های کاندید بسازید و آن‌ها را با چند معیار بسنجید، نه با یک عدد.">Build candidate models and measure them with several metrics rather than a single number.</p>
+          </article>
+          <article class="card process-card">
+            <p class="card-meta" data-i18n="projects.process.label4" data-i18n-fa="گام 04">Step 04</p>
+            <h3 class="card-title" data-i18n="projects.process.title4" data-i18n-fa="یادگیری از آزمایش‌ها">Learning from Experiments</h3>
+            <p class="card-text" data-i18n="projects.process.text4" data-i18n-fa="هر نتیجه را شاهد بدانید: ثبت کنید چه چیزی کارساز بود، چه چیزی نبود و نتیجه برای گام بعدی چه می‌گوید.">Treat every result as evidence: record what worked, what failed, and what it suggests next.</p>
+          </article>
+          <article class="card process-card">
+            <p class="card-meta" data-i18n="projects.process.label5" data-i18n-fa="گام 05">Step 05</p>
+            <h3 class="card-title" data-i18n="projects.process.title5" data-i18n-fa="بهبود از طریق تکرار">Improving through Iteration</h3>
+            <p class="card-text" data-i18n="projects.process.text5" data-i18n-fa="ویژگی‌ها، آستانه‌ها و مدل‌ها را در چرخه‌های پیاپی اصلاح کنید تا راه‌حل روشن‌تر و قابل‌اعتمادتر شود.">Refine features, thresholds, and models in cycles until the solution is clearer and more reliable.</p>
+          </article>
+        </div>
+
+        <p class="section-lead process-note" data-i18n="projects.behind.note" data-i18n-fa="این مراحل برای همه پروژه‌ها یکسان نیستند. SmartGym AI بیشتر به آماده‌سازی داده و ارزیابی مدل وابسته است، در حالی که بازی اخلاقی بر پژوهش، طراحی آموزشی و کار تیمی تمرکز دارد، نه بر آموزش مدل.">These stages do not apply identically to every project. SmartGym AI relies heavily on data preparation and model evaluation, while the ethics game centers on research, educational design, and teamwork rather than model training.</p>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="whats-next" aria-labelledby="whats-next-title">
+      <div class="section-inner cta-inner">
+        <p class="section-eyebrow cta-eyebrow">
+          <span class="section-index" aria-hidden="true">04</span>
+          <span class="section-rule" aria-hidden="true"></span>
+          <span class="section-label" data-i18n="projects.next.eyebrow" data-i18n-fa="نگاه به آینده">Looking Ahead</span>
+        </p>
+        <h2 class="cta-title" id="whats-next-title" data-i18n="projects.next.title" data-i18n-fa="گام بعدی چیست؟">What's Next?</h2>
+        <p class="cta-text" data-i18n="projects.next.text" data-i18n-fa="این پورتفولیو با کاوش ایده‌های تازه و توسعه پروژه‌های جدید همچنان رشد خواهد کرد. هر افزوده‌ای همان معیار را حفظ خواهد کرد: زمینه‌ای روشن، نتایجی صادقانه و ثبتی از آنچه آموخته شده است.">This portfolio will continue to grow as new ideas are explored and projects are developed. Each addition will keep the same standard: clear context, honest results, and a record of what was learned.</p>
+        <div class="cta-actions">
+          <a class="button button-secondary" href="about.html">
+            <span class="button-label" data-i18n="projects.next.about" data-i18n-fa="درباره من">About Me</span>
+          </a>
+          <a class="button button-secondary" href="skills.html">
+            <span class="button-label" data-i18n="projects.next.skills" data-i18n-fa="مهارت‌ها و یادگیری">Skills & Learning</span>
+          </a>
+          <a class="button button-primary" href="contact.html">
+            <span class="button-label" data-i18n="projects.next.contact" data-i18n-fa="تماس با من">Get in Touch</span>
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#saina-mark"></use></svg>
+          <span class="brand-text">
+            <span class="brand-name" data-i18n="brand.name">Saina Bagheri</span>
+            <span class="brand-role" data-i18n="brand.role">Future AI Researcher</span>
+          </span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Exploring intelligence, one orbit at a time.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria-label="footer.nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a class="footer-link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="about.html" data-i18n="nav.about">About Me</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="education.html" data-i18n="nav.education">Education</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="skills.html" data-i18n="nav.skills">Skills & Learning</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="profiles.html" data-i18n="nav.profiles">Online Profiles</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-meta">
+        <p class="footer-copy" data-i18n="footer.copyright">© 2026 Saina Bagheri. All rights reserved.</p>
+        <a class="back-to-top" href="#projects-hero" data-i18n="footer.top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

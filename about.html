@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Saina Bagheri</title>
+  <meta name="description" content="About Saina Bagheri, a Grade 9 student and Future AI Researcher exploring artificial intelligence, programming, and emerging technologies.">
+  <meta name="author" content="Saina Bagheri">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Me | Saina Bagheri">
+  <meta property="og:description" content="Curiosity, creativity, and a steady commitment to learning about artificial intelligence and emerging technologies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="site-body page-about">
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Skip to main content</a>
+
+  <svg class="svg-sprite" width="0" height="0" aria-hidden="true">
+    <defs>
+      <symbol id="saina-mark" viewBox="0 0 64 64">
+        <ellipse class="mark-orbit" cx="32" cy="32" rx="29" ry="11" transform="rotate(-24 32 32)" fill="none" stroke="currentColor" stroke-width="1.6"></ellipse>
+        <path class="mark-s" d="M46 17C46 10 18 10 18 22C18 33 46 31 46 42C46 54 18 54 18 47" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <circle class="mark-dot" cx="58.5" cy="20.2" r="2.6" fill="currentColor" stroke="none"></circle>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="ambient-layer" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#saina-mark"></use></svg>
+        <span class="brand-text">
+          <span class="brand-name" data-i18n="brand.name">Saina Bagheri</span>
+          <span class="brand-role" data-i18n="brand.role">Future AI Researcher</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel">
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-i18n-aria-label="nav.primary">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+            <li class="nav-item"><a class="nav-link is-active" href="about.html" aria-current="page" data-i18n="nav.about">About Me</a></li>
+            <li class="nav-item"><a class="nav-link" href="education.html" data-i18n="nav.education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="skills.html" data-i18n="nav.skills">Skills & Learning</a></li>
+            <li class="nav-item"><a class="nav-link" href="profiles.html" data-i18n="nav.profiles">Online Profiles</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <div class="control-group language-switch" id="language-switch" role="group" aria-label="Language" data-i18n-aria-label="controls.language">
+            <button class="control-button language-button is-active" id="lang-en" type="button" data-lang-option="en" aria-pressed="true" aria-label="English (EN)" data-i18n-aria-label="lang.enLabel">EN</button>
+            <button class="control-button language-button" id="lang-fa" type="button" data-lang-option="fa" aria-pressed="false" aria-label="Persian (FA)" data-i18n-aria-label="lang.faLabel">FA</button>
+          </div>
+
+          <div class="control-group theme-switch" id="theme-switch" role="group" aria-label="Theme" data-i18n-aria-label="controls.theme">
+            <button class="control-button theme-button is-active" id="theme-light" type="button" data-theme-option="light" aria-pressed="true" aria-label="Light theme" data-i18n-aria-label="theme.lightLabel">
+              <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+              <span class="control-label" data-i18n="theme.light">Light</span>
+            </button>
+            <button class="control-button theme-button" id="theme-dark" type="button" data-theme-option="dark" aria-pressed="false" aria-label="Dark theme" data-i18n-aria-label="theme.darkLabel">
+              <svg class="control-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              <span class="control-label" data-i18n="theme.dark">Dark</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" id="main-content" tabindex="-1">
+
+    <section class="page-hero" id="about-hero" aria-labelledby="about-title">
+      <svg class="hero-orbit-symbol" viewBox="0 0 64 64" aria-hidden="true"><use href="#saina-mark"></use></svg>
+
+      <div class="page-hero-inner">
+        <p class="section-eyebrow">
+          <span class="section-rule" aria-hidden="true"></span>
+          <span class="section-label" data-i18n="about.hero.eyebrow" data-i18n-fa="درباره من">About Me</span>
+        </p>
+        <h1 class="page-title" id="about-title" data-i18n="about.hero.title" data-i18n-fa="کنجکاوی همان جایی است که هر کشف معنادار آغاز می‌شود.">Curiosity is where every meaningful discovery begins.</h1>
+        <p class="page-lead" data-i18n="about.hero.lead" data-i18n-fa="من به یادگیری این موضوع علاقه‌مندم که فناوری چگونه کار می‌کند و هوش مصنوعی چگونه می‌تواند امکانات معنادار بیافریند. در این صفحه نگاهی نزدیک‌تر دارم به کنجکاوی، خلاقیت و نظمی که مسیر من را شکل می‌دهد.">I am drawn to learning how technology works, and to exploring how artificial intelligence can create meaningful possibilities. Here is a closer look at the curiosity, creativity, and discipline that shape my journey.</p>
+      </div>
+    </section>
+
+    <section class="section intro-section" id="personal-introduction" aria-labelledby="about-intro-title">
+      <div class="section-inner intro-layout">
+        <header class="section-header">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">01</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="about.intro.eyebrow" data-i18n-fa="معرفی شخصی">Personal Introduction</span>
+          </p>
+          <h2 class="section-title" id="about-intro-title" data-i18n="about.intro.title" data-i18n-fa="کمی درباره‌ی من">A Little About Me</h2>
+        </header>
+
+        <div class="intro-body">
+          <p class="intro-text" data-i18n="about.intro.p1" data-i18n-fa="نام من سینا باقری است. من دانش‌آموز پایه‌ی نهم هستم و علاقه‌ی زیادی به هوش مصنوعی، برنامه‌نویسی و فناوری‌های نوظهور دارم.">My name is Saina Bagheri. I am a Grade 9 student with a strong interest in artificial intelligence, programming, and emerging technologies.</p>
+          <p class="intro-text" data-i18n="about.intro.p2" data-i18n-fa="از کاوش در ایده‌های تازه، درک این‌که چیزها چگونه کار می‌کنند و تبدیل آنچه یاد می‌گیرم به پروژه‌های عملی لذت می‌برم.">I enjoy exploring new ideas, understanding how things work, and turning what I learn into practical projects.</p>
+          <p class="intro-text" data-i18n="about.intro.p3" data-i18n-fa="به‌ویژه به راه‌هایی علاقه‌مندم که فناوری می‌تواند به حل چالش‌های واقعی کمک کند و فرصت‌های معنادار برای آینده بیافریند.">I am especially interested in the ways technology can help solve real-world challenges and create meaningful opportunities for the future.</p>
+
+          <dl class="fact-list">
+            <div class="fact-item">
+              <dt class="fact-label" data-i18n="about.facts.title" data-i18n-fa="عنوان">Title</dt>
+              <dd class="fact-value" data-i18n="about.facts.titleValue" data-i18n-fa="پژوهشگر آینده‌نگر هوش مصنوعی">Future AI Researcher</dd>
+            </div>
+            <div class="fact-item">
+              <dt class="fact-label" data-i18n="about.facts.level" data-i18n-fa="سطح فعلی">Current level</dt>
+              <dd class="fact-value" data-i18n="about.facts.levelValue" data-i18n-fa="دانش‌آموز پایه‌ی نهم">Grade 9 Student</dd>
+            </div>
+            <div class="fact-item">
+              <dt class="fact-label" data-i18n="about.facts.focus" data-i18n-fa="تمرکز">Focus</dt>
+              <dd class="fact-value" data-i18n="about.facts.focusValue" data-i18n-fa="هوش مصنوعی، برنامه‌نویسی و فناوری‌های نوظهور">Artificial Intelligence, Programming & Emerging Technology</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section personality-section" id="personality-approach" aria-labelledby="about-traits-title">
+      <div class="section-inner">
+        <header class="section-header section-header-split">
+          <div class="section-heading-block">
+            <p class="section-eyebrow">
+              <span class="section-index" aria-hidden="true">02</span>
+              <span class="section-rule" aria-hidden="true"></span>
+              <span class="section-label" data-i18n="about.traits.eyebrow" data-i18n-fa="ویژگی‌های شخصیتی">Character</span>
+            </p>
+            <h2 class="section-title" id="about-traits-title" data-i18n="about.traits.title" data-i18n-fa="شخصیت و رویکرد">Personality and Approach</h2>
+          </div>
+          <p class="section-lead" data-i18n="about.traits.lead" data-i18n-fa="چهار ویژگی، شیوه‌ی یادگیری، ساختن و تأمل من را هدایت می‌کنند.">Four qualities guide how I learn, build, and reflect.</p>
+        </header>
+
+        <ul class="interest-grid">
+          <li class="interest-item">
+            <article class="interest-card">
+              <span class="interest-index" aria-hidden="true">01</span>
+              <h3 class="interest-title" data-i18n="about.traits.curious.title" data-i18n-fa="کنجکاو">Curious</h3>
+              <p class="interest-text" data-i18n="about.traits.curious.text" data-i18n-fa="من می‌پرسم چرا چیزها این‌گونه کار می‌کنند و از دنبال کردن یک پرسش تا رسیدن به مسیری تازه لذت می‌برم.">I ask why things work the way they do, and I enjoy following a question until it leads somewhere new.</p>
+            </article>
+          </li>
+          <li class="interest-item">
+            <article class="interest-card">
+              <span class="interest-index" aria-hidden="true">02</span>
+              <h3 class="interest-title" data-i18n="about.traits.creative.title" data-i18n-fa="خلاق">Creative</h3>
+              <p class="interest-text" data-i18n="about.traits.creative.text" data-i18n-fa="به دنبال راه‌های تازه برای توضیح ایده‌ها و استفاده‌ی اندیشمندانه از فناوری در مسیرهای غیرمنتظره هستم.">I look for fresh ways to explain ideas and to use technology in thoughtful, unexpected directions.</p>
+            </article>
+          </li>
+          <li class="interest-item">
+            <article class="interest-card">
+              <span class="interest-index" aria-hidden="true">03</span>
+              <h3 class="interest-title" data-i18n="about.traits.detail.title" data-i18n-fa="دقیق‌نگر">Detail-oriented</h3>
+              <p class="interest-text" data-i18n="about.traits.detail.text" data-i18n-fa="به مراحل کوچکی که یک مدل، یک برنامه یا یک توضیح را قابل اعتماد می‌کنند، با دقت توجه می‌کنم.">I pay close attention to the small steps that make a model, a program, or an explanation reliable.</p>
+            </article>
+          </li>
+          <li class="interest-item">
+            <article class="interest-card">
+              <span class="interest-index" aria-hidden="true">04</span>
+              <h3 class="interest-title" data-i18n="about.traits.organized.title" data-i18n-fa="منظم">Organized</h3>
+              <p class="interest-text" data-i18n="about.traits.organized.text" data-i18n-fa="یادگیری و پروژه‌هایم را با برنامه‌ریزی پیش می‌برم تا پیشرفت پیوسته باشد و هر ایده جایگاه روشنی داشته باشد.">I plan my learning and projects carefully, so progress stays steady and every idea has a clear place.</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section interests-section" id="areas-of-interest" aria-labelledby="about-interests-title">
+      <div class="section-inner">
+        <header class="section-header section-header-center">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">03</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="about.interests.eyebrow" data-i18n-fa="علایق">Interests</span>
+          </p>
+          <h2 class="section-title" id="about-interests-title" data-i18n="about.interests.title" data-i18n-fa="حوزه‌های علاقه">Areas of Interest</h2>
+          <p class="section-lead" data-i18n="about.interests.lead" data-i18n-fa="فناوری در مرکز علایق من قرار دارد. فراتر از آن، چند علاقه‌ی شخصی شیوه‌ی نگاه من به جهان را شکل می‌دهند.">Technology sits at the center of my interests. Beyond it, a few personal passions shape how I see the world.</p>
+        </header>
+
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3 class="skill-group-title" data-i18n="about.interests.techTitle" data-i18n-fa="فناوری">Technology</h3>
+            <ul class="skill-list">
+              <li class="skill-chip" data-i18n="about.interests.tech.ai" data-i18n-fa="هوش مصنوعی">Artificial Intelligence</li>
+              <li class="skill-chip" data-i18n="about.interests.tech.ml" data-i18n-fa="یادگیری ماشین">Machine Learning</li>
+              <li class="skill-chip" data-i18n="about.interests.tech.dl" data-i18n-fa="یادگیری عمیق">Deep Learning</li>
+              <li class="skill-chip" data-i18n="about.interests.tech.cv" data-i18n-fa="بینایی رایانه‌ای">Computer Vision</li>
+              <li class="skill-chip" data-i18n="about.interests.tech.nlp" data-i18n-fa="پردازش زبان طبیعی">Natural Language Processing</li>
+              <li class="skill-chip" data-i18n="about.interests.tech.genai" data-i18n-fa="هوش مصنوعی مولد">Generative AI</li>
+              <li class="skill-chip" data-i18n="about.interests.tech.robotics" data-i18n-fa="رباتیک">Robotics</li>
+              <li class="skill-chip" data-i18n="about.interests.tech.nn" data-i18n-fa="شبکه‌های عصبی">Neural Networks</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title" data-i18n="about.interests.personalTitle" data-i18n-fa="ابعاد شخصی">Personal Dimensions</h3>
+            <ul class="skill-list">
+              <li class="skill-chip" data-i18n="about.interests.personal.astronomy" data-i18n-fa="نجوم و سیاهچاله‌ها">Astronomy and black holes</li>
+              <li class="skill-chip" data-i18n="about.interests.personal.programming" data-i18n-fa="برنامه‌نویسی">Programming</li>
+              <li class="skill-chip" data-i18n="about.interests.personal.chemistry" data-i18n-fa="شیمی">Chemistry</li>
+              <li class="skill-chip" data-i18n="about.interests.personal.scifi" data-i18n-fa="فیلم‌های علمی‌تخیلی">Science-fiction films</li>
+              <li class="skill-chip" data-i18n="about.interests.personal.music" data-i18n-fa="موسیقی">Music</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint vision-section" id="my-vision" aria-labelledby="about-vision-title">
+      <div class="section-inner intro-layout">
+        <header class="section-header">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">04</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="about.vision.eyebrow" data-i18n-fa="جهت‌گیری">Direction</span>
+          </p>
+          <h2 class="section-title" id="about-vision-title" data-i18n="about.vision.title" data-i18n-fa="چشم‌انداز من">My Vision</h2>
+        </header>
+
+        <div class="intro-body">
+          <p class="intro-text" data-i18n="about.vision.p1" data-i18n-fa="من باور دارم که فناوری باید بیش از آسان‌تر کردن زندگی عمل کند؛ باید پیشرفتی معنادار بیافریند و امکانات تازه‌ای برای بشریت بگشاید.">I believe technology should do more than make life easier; it should create meaningful progress and open new possibilities for humanity.</p>
+          <p class="intro-text" data-i18n="about.vision.p2" data-i18n-fa="کنجکاوی من درباره‌ی هوش مصنوعی و فناوری‌های نوظهور، مرا به ادامه‌ی یادگیری، کاوش در ایده‌ها و تبدیل دانش به پروژه‌های عملی ترغیب می‌کند.">My curiosity about artificial intelligence and emerging technologies motivates me to keep learning, exploring ideas, and turning knowledge into practical projects.</p>
+          <p class="intro-text" data-i18n="about.vision.p3" data-i18n-fa="امیدوارم در آینده‌ای مشارکت داشته باشم که در آن نوآوری به حل چالش‌های واقعی کمک کند و تفاوتی مثبت ایجاد کند.">I hope to contribute to a future where innovation helps solve real-world challenges and makes a positive difference.</p>
+          <p class="intro-text" data-i18n="about.vision.p4" data-i18n-fa="هدف بلندمدت من این است که در پروژه‌های فناوری بین‌المللی مشارکت کنم و به جهانی هوشمندتر و بهتر به‌هم‌پیوسته کمک کنم.">My long-term goal is to take part in international technology projects and contribute to a smarter, better-connected world.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section learning-section" id="learning-philosophy" aria-labelledby="about-learning-title">
+      <div class="section-inner intro-layout">
+        <header class="section-header">
+          <p class="section-eyebrow">
+            <span class="section-index" aria-hidden="true">05</span>
+            <span class="section-rule" aria-hidden="true"></span>
+            <span class="section-label" data-i18n="about.learning.eyebrow" data-i18n-fa="فلسفه">Philosophy</span>
+          </p>
+          <h2 class="section-title" id="about-learning-title" data-i18n="about.learning.title" data-i18n-fa="یادگیری فرایندی پیوسته است.">Learning is an ongoing process.</h2>
+          <p class="section-lead" data-i18n="about.learning.lead" data-i18n-fa="هر مفهوم، دری به مفهوم بعدی می‌گشاید. رویکرد من بر پیشرفت پایدار استوار است، نه بر یک لحظه‌ی قطعیت.">Every concept opens a door to the next one. My approach is built on steady progress rather than on a single moment of certainty.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="about.learning.step1.date" data-i18n-fa="گام ۰۱">Step 01</p>
+            <h3 class="timeline-title" data-i18n="about.learning.step1.title" data-i18n-fa="کاوش در مفاهیم تازه">Exploring new concepts</h3>
+            <p class="timeline-body" data-i18n="about.learning.step1.text" data-i18n-fa="درک یک ایده از پایه‌هایش و سپس پرسیدن این‌که چه امکاناتی را فراهم می‌کند.">Understanding an idea from its foundations, then asking what it makes possible.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="about.learning.step2.date" data-i18n-fa="گام ۰۲">Step 02</p>
+            <h3 class="timeline-title" data-i18n="about.learning.step2.title" data-i18n-fa="یادگیری از راه پروژه‌های عملی">Learning through practical projects</h3>
+            <p class="timeline-body" data-i18n="about.learning.step2.text" data-i18n-fa="تبدیل نظریه به آزمایش‌های کوچک، جایی که اشتباه‌ها هم به اندازه‌ی موفقیت‌ها آموزنده‌اند.">Turning theory into small experiments, where mistakes teach as much as successes.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="about.learning.step3.date" data-i18n-fa="گام ۰۳">Step 03</p>
+            <h3 class="timeline-title" data-i18n="about.learning.step3.title" data-i18n-fa="پرورش مهارت حل مسئله">Developing problem-solving skills</h3>
+            <p class="timeline-body" data-i18n="about.learning.step3.text" data-i18n-fa="شکستن چالش‌های پیچیده به پرسش‌های روشن و آزمودن دقیق هر بخش.">Breaking complex challenges into clear questions and testing each part with care.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="about.learning.step4.date" data-i18n-fa="گام ۰۴">Step 04</p>
+            <h3 class="timeline-title" data-i18n="about.learning.step4.title" data-i18n-fa="بهبود دانش فنی در طول زمان">Improving technical knowledge over time</h3>
+            <p class="timeline-body" data-i18n="about.learning.step4.text" data-i18n-fa="بازبینی کارهای قبلی، اصلاح درک و ساختن عمق دانش گام‌به‌گام.">Revisiting earlier work, refining understanding, and building depth step by step.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="call-to-action" aria-labelledby="about-cta-title">
+      <div class="section-inner cta-inner">
+        <p class="section-eyebrow cta-eyebrow">
+          <span class="section-index" aria-hidden="true">06</span>
+          <span class="section-rule" aria-hidden="true"></span>
+          <span class="section-label" data-i18n="about.cta.eyebrow" data-i18n-fa="ادامه">Continue</span>
+        </p>
+        <h2 class="cta-title" id="about-cta-title" data-i18n="about.cta.title" data-i18n-fa="کاوش در کارهای من را ادامه دهید.">Continue exploring my work.</h2>
+        <p class="cta-text" data-i18n="about.cta.text" data-i18n-fa="پروژه‌هایی را که می‌سازم و تحصیلاتی را که مسیرم در هوش مصنوعی را شکل می‌دهد، کشف کنید.">Explore the projects I am building and the education that shapes my path in artificial intelligence.</p>
+        <div class="cta-actions">
+          <a class="button button-primary" href="projects.html" title="Explore my projects" data-i18n-title="about.cta.projectsTitle" data-i18n-fa-title="پروژه‌های من را ببینید">
+            <span class="button-label" data-i18n="about.cta.projects" data-i18n-fa="پروژه‌های من">My Projects</span>
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a class="button button-secondary" href="education.html" title="Explore my education" data-i18n-title="about.cta.educationTitle" data-i18n-fa-title="تحصیلات من را ببینید">
+            <span class="button-label" data-i18n="about.cta.education" data-i18n-fa="تحصیلات من">My Education</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#saina-mark"></use></svg>
+          <span class="brand-text">
+            <span class="brand-name" data-i18n="brand.name">Saina Bagheri</span>
+            <span class="brand-role" data-i18n="brand.role">Future AI Researcher</span>
+          </span>
+        </a>
+        <p class="footer-tagline" data-i18n="footer.tagline">Exploring intelligence, one orbit at a time.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation" data-i18n-aria-label="footer.nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a class="footer-link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="about.html" data-i18n="nav.about">About Me</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="education.html" data-i18n="nav.education">Education</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="skills.html" data-i18n="nav.skills">Skills & Learning</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="profiles.html" data-i18n="nav.profiles">Online Profiles</a></li>
+          <li class="footer-nav-item"><a class="footer-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-meta">
+        <p class="footer-copy" data-i18n="footer.copyright">© 2026 Saina Bagheri. All rights reserved.</p>
+        <a class="back-to-top" href="#about-hero" data-i18n="footer.top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
